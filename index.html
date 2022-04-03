@@ -203,7 +203,8 @@
 
         <div class="row">
 
-           <form onsubmit="return myFun()" action="https://formspree.io/f/mnqwblwb" method="POST">
+           
+            <form onsubmit="return myFun()" action="https://formspree.io/f/mnqwblwb" method="POST">
                 
                 <input type="text" id="First_Name" name="first name"class="box" placeholder="first name" required>
                 <input type="text" id="Last_Name" name="last name" class="box" placeholder="last name" required>
@@ -212,6 +213,8 @@
                 <input type="text" name="subject" class="box" placeholder="subject" required>
                 <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message" required></textarea>
                 <input type="submit" value="Send message" class="btn">
+               
+                
             </form>
 
             <div class="content">
@@ -234,7 +237,7 @@
     </section>
 
 </div>
-    <script>
+<script>
     function myFun(){
         var letters=/^[A-Za-z ]+$/;
         var a =document.getElementById("First_Name").value;
