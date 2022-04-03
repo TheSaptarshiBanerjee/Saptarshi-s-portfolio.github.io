@@ -203,9 +203,10 @@
 
         <div class="row">
 
-            <form action="https://formspree.io/f/mnqwblwb" method="POST">
-                 <input type="text" name="first name"class="box" placeholder="first name" required>
-                <input type="text"name="last name" class="box" placeholder="last name" required>
+           <form onsubmit="return myFun()" action="https://formspree.io/f/mnqwblwb" method="POST">
+                
+                <input type="text" id="First_Name" name="first name"class="box" placeholder="first name" required>
+                <input type="text" id="Last_Name" name="last name" class="box" placeholder="last name" required>
                 <input type="email"name="email" class="box" placeholder="your email" required>
                 
                 <input type="text" name="subject" class="box" placeholder="subject" required>
@@ -233,6 +234,30 @@
     </section>
 
 </div>
+    <script>
+    function myFun(){
+        var letters=/^[A-Za-z ]+$/;
+        var a =document.getElementById("First_Name").value;
+        var b =document.getElementById("Last_Name").value;
+
+    
+        if(a.match(letters)){
+            true;
+        }
+        else{
+            alert("First Name must be character");
+            
+            return false;
+        }
+        if(b.match(letters)){
+            true;
+        }
+        else{
+            alert("Last Name must be character");
+            return false;
+        }
+    }
+</script>
 
 
 <!-- content section ends -->
